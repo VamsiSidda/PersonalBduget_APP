@@ -20,6 +20,8 @@ export default function Configure() {
     //   history.push("/");
         //navigate('/configure');
         document.getElementById("Budget-title").value="";
+        document.getElementById("Budget-related_value").value="";
+        document.getElementById("Budget-color").value="";
     } catch (err) {
       err.response.data.msg && setError(err.response.data.msg);
     }

@@ -45,7 +45,11 @@ export default function Expense() {
         // { headers: { "x-auth-token": token } }
       );
     //   history.push("/");
-    navigate('/');
+    // navigate('/');
+    document.getElementById("expense-dropdown").value="";
+      document.getElementById("expense-related_value").value="";
+      document.getElementById("expense-month").value="";
+      document.getElementById("expense-year").value="";
     } catch (err) {
       err.response.data.msg && setError(err.response.data.msg);
     }
