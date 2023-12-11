@@ -10,9 +10,9 @@ const userModel = require('./data/user')
 const expensesModel = require('./data/expense');
 const app = express();
 const PORT = process.env.PORT || 5000;
-const MONGODB_URI = "mongodb://127.0.0.1:27017/Personal_budget_DB";
+//const MONGODB_URI = "mongodb://127.0.0.1:27017/Personal_budget_DB";
  // Replace with your MongoDB connection URI
-//const MONGODB_URI= "mongodb+srv://suryavamsi:surya1459@finalproject.zqnxrkg.mongodb.net/?retryWrites=true&w=majority";
+const MONGODB_URI= "mongodb+srv://suryavamsi:surya1459@finalproject.zqnxrkg.mongodb.net/?retryWrites=true&w=majority";
 app.use(express.json());
 app.use(cors());
 app.use(compression());
