@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate} from 'react-router-dom';
 
 import Menu from './Menu/Menu';
@@ -11,13 +11,19 @@ import Expenses from './Expenses/Expense';
 
 const App = () => {
   const [authenticated, setAuthenticated] = useState(false);
+  useEffect(() => {
+    const tokenExpiryWarning = setTimeout(() => {
+      alert('Your session will expire in 20 seconds. Please refresh your token.');
+    }, 40000);
 
+    return () => clearTimeout(tokenExpiryWarning);
+  }, []);
   const handleLogin = () => {
     setAuthenticated(true);
   };
 
   const handleLogout = () => {
-    // Perform any necessary cleanup or server-side logout logic
+  
     setAuthenticated(false);
   };
 

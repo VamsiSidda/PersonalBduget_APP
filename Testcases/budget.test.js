@@ -1,6 +1,6 @@
 const request = require('supertest');
 const app = require('../app');
-const { budgetModel } = require('../data/Budget');
+const { budgetModel } = require('../data/budget');
 const mongoose = require('mongoose');
 
 beforeAll((done) => {

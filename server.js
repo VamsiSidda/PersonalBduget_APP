@@ -46,6 +46,17 @@ const authenticateJWT = (req, res, next) => {
   });
 };
 
+const handleTokenRefresh = () => {
+  const currentToken = localStorage.getItem('auth-token');
+
+  if (!currentToken) {
+    // Handle the case where there is no token (user is not authenticated)
+    console.log('No token found. Redirect to login page or handle appropriately.');
+    // Redirect to the login page or handle the lack of authentication
+    return;
+  }
+};
+
 // Create a new user (signup) route
 app.post('/api/signup', async (req, res) => {
   const { email, password, displayName } = req.body;
