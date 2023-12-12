@@ -12,7 +12,10 @@ export default function BarChart() {
     
     useEffect(() => {
         // const token=localStorage.getItem("auth-token");
-        axios.get('http://localhost:5000/api/budgets/user')
+       // axios.get('http://localhost:5000/api/budgets/user')
+       axios.get('http://167.99.62.218:5000/api/budgets/user')
+
+
         .then(res => {
             var l=[];
             var d =[];
@@ -31,7 +34,9 @@ export default function BarChart() {
             
             })
 
-        axios.get('http://localhost:5000/api/expenses/user')
+        //axios.get('http://localhost:5000/api/expenses/user')
+        axios.get('http://167.99.62.218:5000/api/expenses/user')
+
         .then(res => {
             // var f = [];
             var e=[];
