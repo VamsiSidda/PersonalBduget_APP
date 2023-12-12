@@ -1,4 +1,4 @@
-const { userModel } = require('../models/User');
+const { userModel } = require('../data/User');
 const mongoose = require('mongoose');
 
 beforeAll((done) => {

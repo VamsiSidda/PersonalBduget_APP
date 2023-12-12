@@ -1,10 +1,10 @@
 const request = require('supertest');
 const app = require('../app');
-const { budgetModel } = require('../models/Budget');
+const { budgetModel } = require('../data/Budget');
 const mongoose = require('mongoose');
 
 beforeAll((done) => {
- mongoose.connect('mongodb://localhost:27017/budgetDB', {
+ mongoose.connect('mongodb+srv://suryavamsi:surya1459@finalproject.zqnxrkg.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
  });
