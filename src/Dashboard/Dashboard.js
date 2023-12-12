@@ -14,7 +14,7 @@ function Dashboard() {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axiosGet('http://localhost:5000/api/budgets/user');
+                const response = await axiosGet('http://167.99.62.218:5000/api/budgets/user');
 
                 if (response && response.data) {
                     const myBudgetData = response.data;

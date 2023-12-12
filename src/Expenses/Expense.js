@@ -19,7 +19,7 @@ export default function Expense() {
 
   useEffect(() => {
     async function fetchData() {
-      const budgetDataRes = await axios.get("http://localhost:5000/api/budgets/user");
+      const budgetDataRes = await axios.get("http://167.99.62.218:5000/api/budgets/user");
       
       console.log(budgetDataRes);
       let array = [];
@@ -40,7 +40,7 @@ export default function Expense() {
       let token = localStorage.getItem("auth-token");
       const expenseData = { title, related_value, month, year};
       const expenseRes = await axios.post(
-        "http://localhost:5000/api/expenses",
+        "http://167.99.62.218:5000/api/expenses",
         expenseData,
         // { headers: { "x-auth-token": token } }
       );
