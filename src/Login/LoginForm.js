@@ -11,7 +11,7 @@ const LoginForm = ({ onLogin }) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:5000/api/login', { email, password });
+      const response = await axios.post('http://167.99.62.218:5000/api/login', { email, password });
       const token = response.data.token;
 
       // Save the token to localStorage or cookies for future requests
